@@ -10,16 +10,16 @@ import {
 const emailRouter = express.Router();
 
 // Get
-emailRouter.get('/emails', getAllEmails);
-emailRouter.get('/emails/:id', getEmail);
+emailRouter.get('/', getAllEmails);
+emailRouter.get('/:id', getEmail);
 
 // Put
-emailRouter.put('/emails/:id', updateEmail);
+emailRouter.put('/:id', updateEmail);
 
 // Post
-emailRouter.post('/emails', createEmail);
+emailRouter.post('/', createEmail);
 
 // Delete
-emailRouter.delete('/emails/:id', deleteEmail);
+emailRouter.delete('/:id', deleteEmail);
 
 export default emailRouter;

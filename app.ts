@@ -12,6 +12,7 @@ import tournamentRouter from './routes/tournament.router';
 import organizationRouter from './routes/organization.router';
 import emailRouter from './routes/email.router';
 import dashBoardRouter from './routes/dashboard.router';
+import notFoundRouter from './routes/notFound.router';
 
 // Load .dotenv file
 require('dotenv').config();
@@ -42,8 +43,8 @@ app.use(passport.initialize());
 app.use('/users', userRouter);
 app.use('/auth', authRouter);
 app.use('/dashboard', dashBoardRouter);
-app.use(tournamentRouter);
-app.use(organizationRouter);
-app.use(emailRouter);
-
+app.use('/tournament', tournamentRouter);
+app.use('/organization', organizationRouter);
+app.use('/email', emailRouter);
+app.use(notFoundRouter);
 export default app;

@@ -10,10 +10,10 @@ import {
 const organizationRouter = express.Router();
 
 // Rutas para los torneos
-organizationRouter.post('/organization', createOrganization);
-organizationRouter.get('/organization', getAllOrganizations);
-organizationRouter.get('/organization/:id', getOrganization);
-organizationRouter.put('/organization/:id', updateOrganization);
-organizationRouter.delete('/organization/:id', deleteOrganization);
+organizationRouter.post('/', createOrganization);
+organizationRouter.get('/', getAllOrganizations);
+organizationRouter.get('/:id', getOrganization);
+organizationRouter.put('/:id', updateOrganization);
+organizationRouter.delete('/:id', deleteOrganization);
 
 export default organizationRouter;
