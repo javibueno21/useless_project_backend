@@ -8,7 +8,6 @@ import { INVALID_TOKEN_PAGE } from '../constants/PAGE_OPTIONS';
  * @param res
  * @param next
  */
-// TODO quizas el checktoken deberia ser un jwt con tiempo de expiracion PA QUE TENGA MAS SENTIDO
 const checkToken = async (
   req: Request,
   res: Response,
