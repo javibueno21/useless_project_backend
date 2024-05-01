@@ -11,6 +11,7 @@ require('dotenv').config();
 const PORT = process.env.SERVER_PORT || 7000;
 
 // Load SSH certs for HTTPS
+// you may need to provide your own certs, this ones are an example
 var key = fs.readFileSync(__dirname + '/certs/selfsigned.key');
 var cert = fs.readFileSync(__dirname + '/certs/selfsigned.crt');
 var options = {
