@@ -7,8 +7,8 @@ block content
         h2.text-center.text-2xl.font-extrabold= heading
 
         .mt-8.mx-auto.max-w-md
-            if server_error
-                h1.bg-red-500.text-white.uppercase.p-2.font-bold.text-center.mb-2= server_error.message
+            if error_message
+                h1.bg-red-500.text-white.uppercase.p-2.font-bold.text-center.mb-2= error_message
             .bg-white.py-8.px-4.shadow 
                 
                 form.space-y-5(method="POST" action="/auth/local")

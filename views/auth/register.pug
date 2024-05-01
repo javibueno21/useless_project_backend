@@ -7,11 +7,12 @@ block content
         h2.text-center.text-2xl.font-extrabold= heading
         
         .mt-8.mx-auto.max-w-md
-            if server_error
-                h1.bg-red-500.text-white.uppercase.p-2.font-bold.text-center.mb-2= server_error.message
+            if error_message
+                h1.bg-red-500.text-white.uppercase.p-2.font-bold.text-center.mb-2= error_message
             .bg-white.py-8.px-4.shadow
 
                 form.space-y-5(method="POST" action="/users/register")
+                    a(class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 cursor-pointer px-3" href="/auth/google") Sing in with google
                     input(type="hidden" name="_csrf" value=csrfToken)
                     div 
                         label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="name") Your name

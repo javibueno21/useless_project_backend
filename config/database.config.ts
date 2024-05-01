@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 // Mongo connection string
 const mongoURL: string =
   process.env.MONGOOSE_CONNECTION_URL ||
-  'mongodb://localhost:27017/pokemon_tournament';
+  'mongodb://localhost:27017/useless_project';
 
 /**
  * Connects to MongoDB database

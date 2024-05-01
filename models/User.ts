@@ -12,7 +12,14 @@ const UserSchema = new Schema<IUser>(
   {
     img: { type: String, default: '' },
     name: { type: String, default: '' },
-    username: { type: String, required: true },
+    username: {
+      type: String,
+      default:
+        'User' +
+        new Date().getTime() +
+        Math.random() * (new Date().getTime() - new Date().getTime() - 1) +
+        1,
+    },
     email: { type: String, required: true, unique: true },
     password: { type: String, default: '' },
     confirmed: {
